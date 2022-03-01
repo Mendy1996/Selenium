@@ -1,23 +1,35 @@
 package Pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
+
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
 
 
 
 public class AmazonPages extends BasePage{
 	
-    private By champRechercheLocator = By.id("twotabsearchtextbox");
-    private By bouttonRechercher = By.xpath("//input[@value='Go']");
+	@FindBy(id = "twotabsearchtextbox")
+	private WebElement champRechercheLocator;
+	
+	
+	@FindBy(xpath = "//input[@value='Go']")
+	private WebElement bouttonRechercher;
+    
+ 
 
-    public AmazonPages(WebDriver driver) {
-        super(driver);
+    public AmazonPages() {
+        super();
+        PageFactory.initElements(getDriver(), this);
         //verifier La page
     }
 
     public void rechercher(String recherche){
-        setText(champRechercheLocator,recherche);
-        clickElement(bouttonRechercher);
+    	champRechercheLocator.getTagName();
+        this.champRechercheLocator.sendKeys(recherche);
+        this.bouttonRechercher.click();
         
         
     }

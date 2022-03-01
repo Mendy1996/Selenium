@@ -1,2 +1,6 @@
+utilities\Siren.class
+utilities\PropertiesReader.class
 Pages\AmazonPages.class
+utilities\Constants.class
 Pages\BasePage.class
+utilities\SSLCertificateErrorHandler.class

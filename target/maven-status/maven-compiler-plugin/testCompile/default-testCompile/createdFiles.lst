@@ -1,2 +1,5 @@
 Steps\AmazonStep.class
 Steps\TestRunners.class
+Steps\BaseStep.class
+com\rsp\tests\utils\AnnotationTransformer.class
+com\rsp\tests\utils\Retry.class
